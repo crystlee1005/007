@@ -3,21 +3,23 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[])
- {
- 	
-	int i; 
-	printf("함수 호출전 i = %d \n", i);
-	inc(i);
-	printf("함수 호출후 i=%d \n", i);
-	return 0;
-}
+void f(void);
 
- 
- 	int inc(int counter)
+ int i;
+ int main(void)
+ {
+ 	for (i=0; i<5; i++)
  	{
- 		counter++;
- 		return counter;
+ 		f();
+ 		
 	 }
+	 return 0;
+
+ }
  
+ void f(void)
+ {
+ 	for ( i=0; i<10; i++)
+ 	printf("#");
+  } 
 
